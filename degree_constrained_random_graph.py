@@ -1,5 +1,5 @@
 """
-degree_preserving_random_graph.py
+degree_constrained_random_graph.py
 
 Contains a function that generates random graphs, 
 such that their nodes have (approximately) the 
@@ -9,9 +9,9 @@ specified degrees.
 import numpy as np
 
 
-def degree_preserving_random_graph(degrees, verbose=True):
+def degree_constrained_random_graph(degrees, verbose=True):
     """
-    degree_preserving_random_graph(degrees, verbose=True)
+    degree_constrained_random_graph(degrees, verbose=True)
 
     Generate a random graph whose nodes have (approximately) the specified degrees.
     
@@ -48,7 +48,7 @@ def degree_preserving_random_graph(degrees, verbose=True):
         weight_vec = (deg[non_neighbors] > 0)
         if np.all(weight_vec == False):
             if verbose:
-                print("WARNING: `degree_preserving_random_graph`: forced to violate node degree constraint")
+                print("WARNING: `degree_constrained_random_graph`: forced to violate node degree constraint")
             weight_vec = orig_deg[non_neighbors]
 
         weight_vec = weight_vec.astype(float)
