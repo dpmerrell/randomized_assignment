@@ -16,6 +16,6 @@ For now it's just a collection of python files&mdash;no packaging or anything.
   *grouped* splits, and *shuffled* splits, but I'm not sure
   it has a function for doing _all_ of those things jointly.
 * `degree_constrained_random_graph.py`. 
-  Generate random graphs whose nodes have specified degree. 
+  Generate random graphs whose nodes have specified degrees. 
   This is useful for some network analyses where we need to compare
   against a "null distribution" of random graphs.
